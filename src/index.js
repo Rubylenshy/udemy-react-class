@@ -50,20 +50,32 @@ function App() {
     return (
         <div>
             <Header />
-            <Pizza />
+            <Menu />
             <Footer />
         </div>
     )
 }
 
-function Header() {
+const Header = () => {
     return <div>
         <h2>Fast React Pizza Co.</h2>
     </div>
 }
-function Footer() {
+const Footer = () => {
+    const time = new Date().getHours;
+    const isOpen = time >= 8 && time <= 12;
+
     return <div>
-        <footer>We're currently open</footer>   
+        <footer>{isOpen ? "We're currently open" : "Sorry, we're closed"}</footer>   
+    </div>
+}
+
+function Menu(props) {
+    return <div>
+        <h2>Our Menu</h2>
+        <Pizza />
+        <Pizza />
+        <Pizza />
     </div>
 }
 
