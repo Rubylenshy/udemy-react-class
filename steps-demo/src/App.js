@@ -36,8 +36,8 @@ function App() {
 					<p className="message">Step {step}: {messages[step - 1]}</p>
 
 					<div className="buttons">
-						<Button bgColor='#7950f2' textColor='#fff' onClick={decreaseStep} text='Previous' />
-						<Button bgColor='#7950f2' textColor='#fff' onClick={increaseStep} text='Next' />
+						<Button bgColor='#7950f2' textColor='#fff' onClick={decreaseStep} text='Previous'> <span>👈</span> Previous </Button>
+						<Button bgColor='#7950f2' textColor='#fff' onClick={increaseStep} text='Next' > Next <span>👉</span></Button>
 					</div>
 				</div>
 			}
@@ -45,13 +45,13 @@ function App() {
     );
 }
 
-function Button({ textColor, bgColor, onClick, text}) {
+function Button({ textColor, bgColor, onClick, children}) {
 	return (
 		<button
 			style={{backgroundColor: bgColor, color: textColor}}
 			onClick={onClick}
 		>
-			{text}
+			{children}
 		</button>
 	)
 }
