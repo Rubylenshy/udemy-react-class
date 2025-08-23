@@ -66,21 +66,6 @@ function reducer(state, action) {
         questionIndex: state.questionIndex + 1,
         answerIndex: null
       };
-    case 'updateQuestionIndex':
-      return {
-        ...state,
-        questionIndex: action.payload
-      };
-    case 'updateTimeLeft':
-      return {
-        ...state,
-        timeLeft: action.payload
-      };
-    case 'updateQuizResults':
-      return {
-        ...state,
-        quizResults: action.payload
-      };
     default:
       throw new Error('Unknown action');
   }
