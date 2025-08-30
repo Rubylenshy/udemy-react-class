@@ -94,10 +94,10 @@ export default function App() {
       </p>
       <p>
         <button
-          onClick={() => dispatch({ type: "requestLoan", payload: 5000 })}
+          onClick={() => dispatch({ type: "requestLoan", payload: 50000 })}
           disabled={!isActive}
         >
-          Request a loan of 5000
+          Request a loan of 50000
         </button>
       </p>
       <p>
