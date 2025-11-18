@@ -10,11 +10,14 @@ function PageNav() {
     ]
     return (
         <nav className={styles.nav}>
-            <Logo />
+            <NavLink to="/" >
+                <Logo />
+            </NavLink>
+            
             <ul>
                 {navigations.map(nav => (
                     <li key={nav.path}>
-                    <NavLink to={nav.path}>{nav.label}</NavLink>
+                        <NavLink to={nav.path} className={nav.path === '/login' ? styles.ctaLink : ''}>{nav.label}</NavLink>
                     </li>
                 ))}
             </ul>
