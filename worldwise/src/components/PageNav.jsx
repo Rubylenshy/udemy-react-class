@@ -10,9 +10,7 @@ function PageNav() {
     ]
     return (
         <nav className={styles.nav}>
-            <NavLink to="/" >
-                <Logo />
-            </NavLink>
+            <Logo />
             
             <ul>
                 {navigations.map(nav => (
